@@ -1,0 +1,201 @@
+[data-theme = 'dark']{
+  --background: rgb(34,34,34);
+  --text-color: rgb(255,255,255);
+
+  --btn-bg:rgb(0,119,235);
+  --btn-hover:rgb(100,167,241);
+  --btn-color:rgb(255,255,255);
+
+  --valid-background: hsl(200, 100%, 50%, 0.1);
+  --valid-border:  rgb(100,167,241);
+  --valid-color: rgb(100,167,241);
+  --valid-hover:hsl(200, 100%, 50%, 0.2);
+
+  --invalid-background: hsl(200, 100%, 50%, 0.1);
+  --invalid-border:  hsl(0, 100%, 50%);
+  --invalid-color: hsl(200, 94%, 25%);
+  --invalid-box-shadow:  hsl(0, 100%, 32%);
+
+  --invalid-hover:hsl(200, 100%, 50%, 0.05);
+
+  --dateP-background: hsla(200, 100%, 50%, 0.1);
+  --dateP-backgroundIN:hsla(200, 100%, 50%, 0.0);
+  --dateP-backgroundINHV:hsla(200, 100%, 50%, 0.1);
+}
+[data-theme = 'light']{
+  --background: rgb(255,255,255);
+  --text-color: rgb(0,0,0);
+
+  --btn-bg:rgb(0,119,255);
+  --btn-hover:rgb(100,167,241);
+  --btn-color:rgb(255, 255, 255);
+
+  --valid-background: rgb(240,242,245);
+  --valid-border:  hsl(200, 54%, 41%);
+  --valid-color: rgb(0,119,255);
+  --valid-hover:rgb(215,218,220);
+
+  --invalid-background: hsl(200, 100%, 50%, 0.1);
+  --invalid-border:  hsl(0, 100%, 50%);
+  --invalid-color: hsl(200, 94%, 25%);
+  --invalid-box-shadow:  hsl(0, 100%, 32%,0.7);
+
+  --invalid-hover:hsl(200, 100%, 50%, 0.05);
+
+  --dateP-background: rgb(240,242,245);
+  --dateP-backgroundIN:rgb(240,242,245);
+  --dateP-backgroundINHV:rgba(240,242,245,0.8);
+}
+body{
+    color: var(--text-color);
+    background: var(--background);
+    
+}
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    color: var(--text-color);
+    background: var(--background);
+    transition: all .2s;
+}
+.react-datepicker__header:not(.react-datepicker__header--has-time-select){
+  background: var(--background);
+}
+
+.react-datepicker__time-list-item:hover{
+  color:black;
+}
+.react-datepicker__input-container{
+  background: var(--dateP-background);
+ }
+
+
+h3{
+  text-align: center;
+}
+#root {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2 rem
+}
+body {
+    align-items: center;
+    max-width: 300px;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .btn {
+    border: none;
+    background: var(--btn-bg);
+    color:  var(--btn-color);
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    outline: none;
+  }
+  .btn:hover,
+  .btn:focus-visible {
+    background: var(--btn-hover);
+  }
+    #Valid{
+    outline: none;
+    background: var(--valid-background);
+    border: 1px solid var(--valid-border);
+    color: var(--valid-color);
+    box-shadow: none;
+    border-radius: 0.5em;
+    padding: 0.25em 0.5em;
+    
+  }
+  .btn-theme{
+    width: 100px;
+    margin:0 auto;
+    border: none;
+    background: var(--btn-bg);
+    color:  var(--btn-color);
+    padding: 0.2em 0.2em;
+    border-radius: 0.7em;
+    cursor: pointer;
+    outline: none;
+  }
+  .btn-theme:hover{
+   background-color: var(--btn-hover);
+  }
+
+    #Valid:hover{
+    background: var(--valid-hover);
+  }
+    #Invalid{
+    outline: none;
+    background: var(--invalid-background);
+    border: 1px solid var(--invalid-border);
+    color: var(--invalid-color);
+    box-shadow: 0 0 10px var(--invalid-box-shadow);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    
+  }
+  #Invalid:hover{
+    background:  var(--invalid-hover);
+  }
+
+  .form option{
+    text-align: center;
+
+  }
+  ::placeholder{
+    color:hsl(180, 33%, 43%);
+  }
+
+ .date{
+    outline: none;
+    text-align: center;
+    background: var(--valid-background);
+    border: 1px solid var(--valid-border);
+    color: var(--valid-color);
+    border-radius: 0.5em;
+    padding: 0.25em 0.5em;
+ }
+
+
+   .dateP{
+    outline: none;
+    text-align: center;
+    background: var(--dateP-backgroundIN);
+    border: none;
+    color: var(--valid-color);
+ }
+ .date:hover{
+    background: var(--valid-hover);
+ }
+ .dateP:hover{
+  background: var(--valid-backgroundINHV);
+ }
+ label{
+    text-align: center;
+ }
+ .form textarea{
+    outline: none;
+
+    background: var(--valid-background);
+    border: 1px solid var(--valid-border);
+    color: var(--valid-color);
+
+    border-radius: 0.5em;
+    padding: 0.25em 0.5em;
+ }
+ .form textarea:hover,
+ .form textarea:focus-visible{
+    background: var(--valid-hover);
+ }
